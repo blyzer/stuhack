@@ -1,6 +1,6 @@
 window.addEventListener('load', function(){
     try {
-        version = chrome.runtime.getManifest().version;
+        version = safari.extension.bundleVersion;
 
         const up_buttons = document.getElementsByClassName("fa-cloud-arrow-up");
     

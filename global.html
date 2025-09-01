@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Global Page</title>
+	<script>
+		safari.application.addEventListener("message", function(event) {
+			if (event.name === "getGlobalValue") {
+				safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("setGlobalValue", "some value");
+			}
+		}, false);
+	</script>
+</head>
+<body>
+</body>
+</html>
